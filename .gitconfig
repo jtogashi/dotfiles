@@ -1,0 +1,52 @@
+[user]
+	email = jtogashi@example.com
+	name = jtogashi
+
+[color]
+        ui = auto
+
+#[diff]
+#	tool = vimdiff
+#
+#[merge]
+#	tool = vimdiff
+
+[alias]
+        co = checkout
+        s = switch
+        r = restore
+        rs = restore --staged
+        a = add
+        c = commit
+        ca = commit --amend
+        pi = cherry-pick
+        ri = rebase -i
+        d = diff
+        dc = diff --cached
+        dt = difftool -y
+        st = status
+        b = branch
+        ba = branch -a
+        ll = log
+        l = log --oneline -n 30
+        l1 = log --oneline
+        fo = fetch origin
+        fp = fetch origin --prune
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        sh = show
+        cv = cherry -v
+        sm = submodule
+
+[core]
+        excludesfile = ~/.gitignore
+
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[pull]
+	ff = only
+
+[diff]
+	indentHeuristic = true
